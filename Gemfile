@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
@@ -30,7 +31,7 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -53,7 +54,6 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'validates_formatting_of'
 gem 'tzinfo-data'
-
 group :development do
   gem 'better_errors'
   gem 'pry-rails'
@@ -61,12 +61,7 @@ end
 
 group :development, :test do
   gem 'dotenv-rails'
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-end
+  end
 
 group :test do
-  gem 'shoulda-matchers'
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
-end
+  end
